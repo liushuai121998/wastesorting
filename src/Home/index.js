@@ -79,6 +79,9 @@ export default Custom_page({
     this.interstitialAd && this.interstitialAd.destroy() 
   },
   newsItemClick(item) {
+    if(!item) {
+      return
+    }
     this.searchValue = item.name
   },
   toSearch() {

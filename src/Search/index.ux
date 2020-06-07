@@ -1,24 +1,39 @@
+<import name="short-cut" src="../components/shortcut"></import>
+
 <template>
     <div class="search-page">
-        <div class="news-list">
+        <list class="news-list">
             <block for="{{item in newsList}}">
-                <div class="news-list__item" key="{{idx}}">
-                    <text>{{item.name}}</text>
+                <list-item class="news-list__item" key="{{idx}}">
+                    <text class="news-list__item__title">{{item.name}}</text>
                     <div class="news-list__item__sub">
-                        <text>属于：</text>
+                        <text class="label">属于：</text>
                         <text>{{item.explain}}</text>
                     </div>
                     <div class="news-list__item__sub">
-                        <text>常见类型：</text>
+                        <text class="label">常见类型：</text>
                         <text>{{item.contain}}</text>
                     </div>
                     <div class="news-list__item__sub">
-                        <text>投放建议：</text>
+                        <text class="label">投放建议：</text>
                         <text>{{item.tip}}</text>
                     </div>
-                </div>
+                </list-item>
             </block>
+        </list>
+        <div class="footer-ad" if="{{footerAdShow}}" onclick="reportAdClick" onappear="reportAdShow">
+            <div class="footer-ad__img">
+            <block if="{{footerAd.icon}}">
+                <image class="footer-ad__img__icon" src="{{footerAd.icon}}"></image>
+            </block>
+            <image class="footer-ad__img__main" src="{{footerAd.imgUrlList ? footerAd.imgUrlList[0] : ''}}"></image>
+            <text class="click-btn__text">{{footerAd.clickBtnText || '查看详情'}}</text>
+            </div>
+            <div class="ad-tip">
+            <text>广告</text>
+            </div>
         </div>
+        <short-cut></short-cut>
     </div>
 </template>
 

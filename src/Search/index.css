@@ -1,10 +1,15 @@
+@import '../Common/css/ad.css';
+
 .search-page {
     padding: 0 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 .news-list {
     display: flex;
     flex-direction: column;
+    height: 1050px;
 }
 
 .news-list__item, .news-list__item__sub {
@@ -17,4 +22,27 @@
     padding: 20px;
     border-radius: 12px;
     margin-top: 20px;
+}
+
+.news-list__item__title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+}
+
+.news-list__item__sub {
+    margin-top: 15px;
+}
+
+.news-list__item__sub text {
+    color: #000;
+}
+.news-list__item__sub .label {
+    color: #888;
+}
+
+.footer-ad {
+    position: fixed;
+    bottom: 120px;
+    left: 0;
 }

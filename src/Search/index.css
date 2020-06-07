@@ -1,0 +1,20 @@
+.search-page {
+    padding: 0 50px;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-list__item, .news-list__item__sub {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-list__item {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}

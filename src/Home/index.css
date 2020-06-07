@@ -1,0 +1,128 @@
+  .home, .main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 40px 0;
+  }
+  .title__text {
+      font-weight: bold;
+      font-size: 64px;
+  }
+
+  .main__content {
+      display: flex;
+      flex-direction: column;
+      padding: 0 50px;
+  }
+
+  .search {
+      margin-bottom: 20px;
+  }
+
+  .search__input {
+      width: 100%;
+      border: 2px solid #eee;
+      height: 60px;
+      border-radius: 30px;
+      padding: 0 20px;
+  }
+
+  .main__content__title {
+      color: #121212;
+      font-size: 36px;
+  }
+
+  .news-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .news-list__item {
+      margin-right: 20px;
+  }
+
+  .news-list__item__text {
+      color: #666;
+      font-size: 30px;
+  }
+
+  .search-btn {
+      width: 300px;
+      height: 60px;
+      background-color: #4B90E1;
+      border-radius: 30px;
+      line-height: 60px;
+      margin: 40px auto 0 auto;
+  }
+
+  .search-btn__text {
+      color: #fff;
+      font-size: 30px;
+      width: 100%;
+      text-align: center;
+  }
+
+  .main__content__image {
+      height: 500px;
+      margin: 0 auto;
+  }
+
+  .footer-ad {
+      position: relative;
+      margin-bottom: 20px;
+      margin-top: 40px;
+      border-radius: 20px;
+      background-color: #E2E2E2;
+      height: 180px;
+  }
+  .footer-ad__img {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+  }
+  .footer-ad__img__icon {
+      /* margin-left: 20px; */
+      width: 80px;
+      height: 80px;
+  }
+  .footer-ad__img__main {
+      /* width: 450px; */
+      height: 160px;
+      /* border-radius: 10px; */
+  }
+  .click-btn__text {
+      background-color: #4B90E1;
+      color: #fff;
+      font-size: 24px;
+      padding: 5px 10px;
+      border-radius: 5px;
+  }
+
+  .ad-tip {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      background-color: rgba(0, 0, 0, .2);
+      padding: 5px 10px;
+      border-radius: 4px;
+  }
+  .ad-tip text {
+      font-size: 18px;
+      color: #fff;
+  }
+
+  .close {
+      position: absolute;
+      right: 17px;
+      top: 17px;
+      width: 24px;
+      height: 24px;
+  }

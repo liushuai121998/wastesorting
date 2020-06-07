@@ -1,0 +1,49 @@
+<import name="short-cut" src="../components/shortcut"></import>
+
+<template>
+  <!-- template里只能有一个根节点 -->
+  <div class="home">
+    <div class="main">
+      <div class="title">
+        <text class="title__text">垃圾分类查询</text>
+      </div>
+      <div class="main__content">
+        <div class="search">
+          <input value="{{searchValue}}" class="search__input" type="text" onchange="searchValueChange" placeholder="输入名称搜索对应分类" />
+        </div>
+        <text class="main__content__title">热搜分类</text>
+        <div class="news-list">
+          <block for="{{item in newsList}}">
+            <div class="news-list__item" onclick="newsItemClick(item)">
+              <text class="news-list__item__text">{{item.name}}</text>
+            </div>
+          </block>
+        </div>
+        <div class="search-btn" onclick="toSearch">
+          <text class="search-btn__text">查询</text>
+        </div>
+        <image class="main__content__image" src="/Common/wastesorting.png"></image>
+      </div>
+      <div class="footer-ad" if="{{footerAdShow}}" onclick="reportAdClick" onappear="reportAdShow">
+        <div class="footer-ad__img">
+          <block if="{{footerAd.icon}}">
+            <image class="footer-ad__img__icon" src="{{footerAd.icon}}"></image>
+          </block>
+          <image class="footer-ad__img__main" src="{{footerAd.imgUrlList ? footerAd.imgUrlList[0] : ''}}"></image>
+          <text class="click-btn__text">{{footerAd.clickBtnText || '查看详情'}}</text>
+        </div>
+        <div class="ad-tip">
+          <text>广告</text>
+        </div>
+      </div>
+    </div>
+    <short-cut></short-cut>
+  </div>
+</template>
+
+<script src="./index.js">
+</script>
+
+<style>
+  @import './index.css';
+</style>

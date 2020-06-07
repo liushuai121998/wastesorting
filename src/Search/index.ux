@@ -1,0 +1,30 @@
+<template>
+    <div class="search-page">
+        <div class="news-list">
+            <block for="{{item in newsList}}">
+                <div class="news-list__item" key="{{idx}}">
+                    <text>{{item.name}}</text>
+                    <div class="news-list__item__sub">
+                        <text>属于：</text>
+                        <text>{{item.explain}}</text>
+                    </div>
+                    <div class="news-list__item__sub">
+                        <text>常见类型：</text>
+                        <text>{{item.contain}}</text>
+                    </div>
+                    <div class="news-list__item__sub">
+                        <text>投放建议：</text>
+                        <text>{{item.tip}}</text>
+                    </div>
+                </div>
+            </block>
+        </div>
+    </div>
+</template>
+
+<script src="./index.js">
+</script>
+
+<style>
+  @import './index.css';
+</style>
